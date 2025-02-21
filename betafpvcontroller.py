@@ -28,5 +28,6 @@ if endpoint is None:
     raise ValueError("No IN endpoint found")
 
 while True:
-    data = device.read(endpoint.bEndpointAddress, 17, timeout=1000)
+    data = device.read(endpoint.bEndpointAddress, 16, timeout=1000)
+    print(data)
     
